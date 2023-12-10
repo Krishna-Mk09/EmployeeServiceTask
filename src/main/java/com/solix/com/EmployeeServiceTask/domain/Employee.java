@@ -1,15 +1,14 @@
 package com.solix.com.EmployeeServiceTask.domain;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
+@Document
 public class Employee {
     @Id
     private String email;
@@ -19,5 +18,4 @@ public class Employee {
     private String phone;
     private String role;
     private double salary;
-
 }

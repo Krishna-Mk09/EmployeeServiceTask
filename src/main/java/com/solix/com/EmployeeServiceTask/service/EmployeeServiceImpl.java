@@ -1,12 +1,10 @@
 package com.solix.com.EmployeeServiceTask.service;
-
 import com.solix.com.EmployeeServiceTask.domain.Employee;
 import com.solix.com.EmployeeServiceTask.exception.EmployeeAlreadyExists;
 import com.solix.com.EmployeeServiceTask.exception.EmployeeNotFound;
 import com.solix.com.EmployeeServiceTask.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 

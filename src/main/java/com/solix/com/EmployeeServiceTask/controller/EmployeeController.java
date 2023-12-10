@@ -1,5 +1,4 @@
 package com.solix.com.EmployeeServiceTask.controller;
-
 import com.solix.com.EmployeeServiceTask.domain.Employee;
 import com.solix.com.EmployeeServiceTask.exception.EmployeeAlreadyExists;
 import com.solix.com.EmployeeServiceTask.exception.EmployeeNotFound;
@@ -45,7 +44,7 @@ public class EmployeeController {
         return new ResponseEntity<>("updated  successfully", HttpStatus.OK);
     }
 
-    @GetMapping("/get/{email}")
+    @GetMapping(path = "/get/{email}",consumes = "application/json")
     public ResponseEntity<?> getsUser(@PathVariable String email) throws EmployeeNotFound {
         return new ResponseEntity<>(this.EMPLOYEE_SERVICE.getEmployeeByEmail(email), HttpStatus.OK);
     }
@@ -55,7 +54,7 @@ public class EmployeeController {
         return new ResponseEntity<>(this.EMPLOYEE_SERVICE.getAllEmails(), HttpStatus.OK);
     }
 
-    @GetMapping("/get/all/employees")
+    @GetMapping(path = "/get/all/employees",produces = "application/xml")
     public ResponseEntity<?> getAllEmployees() {
         return new ResponseEntity<>(this.EMPLOYEE_SERVICE.getAllEmployees(), HttpStatus.OK);
     }

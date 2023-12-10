@@ -1,10 +1,7 @@
 package com.solix.com.EmployeeServiceTask.service;
-
 import com.solix.com.EmployeeServiceTask.domain.Employee;
 import com.solix.com.EmployeeServiceTask.exception.EmployeeAlreadyExists;
 import com.solix.com.EmployeeServiceTask.exception.EmployeeNotFound;
-import org.springframework.data.jpa.repository.JpaRepository;
-
 import java.util.List;
 
 public interface EmployeeService {
